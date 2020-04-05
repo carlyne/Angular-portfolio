@@ -50,8 +50,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
+
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/bootstrap/scss/bootstrap.scss"
+              ]
+            },
+
             "scripts": []
           },
           "configurations": {
@@ -114,8 +122,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
+
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/bootstrap/scss/bootstrap.scss"
+              ]
+            },
+
             "scripts": []
           }
         },
