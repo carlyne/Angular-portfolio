@@ -5,12 +5,8 @@
     <img id="animation" src="#" alt="Animation">
 
     <hr class="d-none d-md-block w-100" />
-    <nav style="border: 1px solid red;" class="left-nav-filter row d-none d-md-block w-100">
-        <ul class="nav flex-column justify-content-around col-md-6">
-            <li class="nav-item"><button class="btn btn--filter">Filtre 1</button></li>
-            <li class="nav-item"><button class="btn btn--filter">Filtre 2</button></li>
-            <li class="nav-item"><button class="btn btn--filter">Filtre 3</button></li>
-        </ul>
+    <nav class="left-nav-filter row d-none d-md-block w-100">
+        <app-sort-nav></app-sort-nav>
     </nav>
 </section>
 
@@ -36,18 +32,8 @@
     </nav>
 
 
-        <!-- __gallerie -->
+    <!-- __gallerie -->
 
-    <figure class="galerie p-3 row flex-wrap justify-content-evenly align-items-stretch">
-        <img class="w--sm item item--illus" src="../assets/img/illus.png" alt="image">
-        <img class="w--sm item item--illus" src="../assets/img/illus.png" alt="image">
-        <img class="w--lg item item--project" src="../assets/img/projet.png" alt="image">
-        <img class="w--md item item--illus" src="../assets/img/illus.png" alt="image">
-        <div class="w--md item item--quote"><h2>"Lorem ipsum dolore situae derestim"</h2></div>
-        <img class="w--md item item--illus" src="../assets/img/illus.png" alt="image">
-        <div class="w--md item item--quote"><h2>"Lorem ipsum dolore situae derestim"</h2></div>
-        <img class="w--sm item item--illus" src="../assets/img/illus.png" alt="image">
-        <img class="w--lg item item--project" src="../assets/img/projet.png" alt="image">
-        
-    </figure>
+    <app-gallery></app-gallery>
+
 </main>
