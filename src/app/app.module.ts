@@ -6,6 +6,12 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { SortNavComponent } from './sort-nav/sort-nav.component';
 import { GalleryItemsData } from './services/galleryItemsData.service';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'gallery', component: GalleryComponent },
+  { path: '', component: GalleryComponent }
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +21,8 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
     GalleryItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     GalleryItemsData

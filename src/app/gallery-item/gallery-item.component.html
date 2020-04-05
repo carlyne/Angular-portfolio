@@ -1,11 +1,11 @@
 <img class="item"
-    *ngIf="!quoteItem"
+    *ngIf="isQuoteCategory(item) == false"
     [ngClass]="[getCategoryStyle(item), getRandomStyleSizing()]" 
     [src]="item.srcImg" 
     [alt]="item.name">
 
 <div class="item"
-    *ngIf="quoteItem"
+    *ngIf="isQuoteCategory(item) == true"
     [ngClass]="[getCategoryStyle(item), getRandomStyleSizing()]">
     <h2>{{item.content}}</h2>
 </div>
