@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { SortNavComponent } from './sort-nav/sort-nav.component';
 import { GalleryItemsData } from './services/galleryItemsData.service';
-import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectComponent } from './project/project.component';
 
@@ -20,7 +19,6 @@ const appRoutes: Routes = [
     AppComponent,
     GalleryComponent,
     SortNavComponent,
-    GalleryItemComponent,
     ProjectComponent
   ],
   imports: [

@@ -1,3 +1,17 @@
 <figure class="galerie p-3 row flex-wrap justify-content-evenly align-items-stretch">
-    <app-gallery-item *ngFor="let item of galleryItemsThumbnails; index as i" [item]="item"></app-gallery-item>
+   
+    <ng-container *ngFor="let galleryItem of galleryItemsThumbnails; index as i">
+        <img class="item"
+        *ngIf="isQuoteCategory(galleryItem) == false"
+        [ngClass]="[getCategoryStyle(galleryItem), getRandomStyleSizing()]" 
+        [src]="galleryItem.srcImg" 
+        [alt]="galleryItem.name">
+    
+        <div class="item"
+            *ngIf="isQuoteCategory(galleryItem) == true"
+            [ngClass]="[getCategoryStyle(galleryItem), getRandomStyleSizing()]">
+            <h2>{{galleryItem.content}}</h2>
+        </div>
+    </ng-container>
+
 </figure>
