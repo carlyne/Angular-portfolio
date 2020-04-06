@@ -10,7 +10,7 @@ import { ProjectComponent } from './project/project.component';
 
 const appRoutes: Routes = [
   { path: 'gallery', component: GalleryComponent },
-  { path: 'project', component: ProjectComponent },
+  { path: 'project/:id', component: ProjectComponent },
   { path: '', component: GalleryComponent }
 ]
 

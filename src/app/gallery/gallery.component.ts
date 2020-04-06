@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryItemsData } from '../services/galleryItemsData.service';
 
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -41,4 +42,10 @@ export class GalleryComponent implements OnInit {
         return 'item--quote';
     }
   }
+
+  // getMore(itemInfo) {
+  //   if (itemInfo.category == 'project') {
+  //     return "/project";
+  //   }
+  // }
 }

@@ -1,11 +1,20 @@
 <figure class="galerie p-3 row flex-wrap justify-content-evenly align-items-stretch">
    
     <ng-container *ngFor="let galleryItem of galleryItemsThumbnails; index as i">
+        <!-- <img class="item"
+        *ngIf="isQuoteCategory(galleryItem) == false"
+        [ngClass]="[getCategoryStyle(galleryItem), getRandomStyleSizing()]" 
+        [src]="galleryItem.srcImg" 
+        [alt]="galleryItem.name"
+        [routerLink]="getMore(galleryItem)"
+        (click)="currentItem = galleryItem"> -->
+
         <img class="item"
         *ngIf="isQuoteCategory(galleryItem) == false"
         [ngClass]="[getCategoryStyle(galleryItem), getRandomStyleSizing()]" 
         [src]="galleryItem.srcImg" 
-        [alt]="galleryItem.name">
+        [alt]="galleryItem.name"
+        [routerLink]="getMore(galleryItem)>
     
         <div class="item"
             *ngIf="isQuoteCategory(galleryItem) == true"

@@ -43,4 +43,13 @@ export class GalleryItemsData {
       content: 'lorem ipsum dolore situa mentoris'
     }
   ]
+
+  getItemThumbnailById(id: number) {
+    const itemsThumbnails = this.itemsThumbnails.find(
+      (item) => {
+        return item.id === id;
+      }
+    );
+    return itemsThumbnails;
+}
 }

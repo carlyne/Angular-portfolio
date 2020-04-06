@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryItemsData } from '../services/galleryItemsData.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private galleryItemsData: GalleryItemsData, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // this.currentItem.name = this.route.snapshot.params['id'];
   }
 
 }
