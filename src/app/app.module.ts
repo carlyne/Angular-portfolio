@@ -7,9 +7,11 @@ import { SortNavComponent } from './sort-nav/sort-nav.component';
 import { GalleryItemsData } from './services/galleryItemsData.service';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ProjectComponent } from './project/project.component';
 
 const appRoutes: Routes = [
   { path: 'gallery', component: GalleryComponent },
+  { path: 'project', component: ProjectComponent },
   { path: '', component: GalleryComponent }
 ]
 
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
     AppComponent,
     GalleryComponent,
     SortNavComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
