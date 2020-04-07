@@ -10,7 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'gallery', component: GalleryComponent },
-  // { path: 'project/:id', component: ProjectComponent },
+  // { path: 'gallery/:id', component: ProjectComponent },
   { path: '', component: GalleryComponent }
 ]
 

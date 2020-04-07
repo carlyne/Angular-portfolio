@@ -17,11 +17,6 @@ export class GalleryComponent implements OnInit {
     this.galleryItemsThumbnails = this.galleryItemsData.itemsThumbnails;
   }
 
-  getRandomStyleSizing() {
-    const sizes = ["w--sm", "w--md", "w--lg"];
-    return sizes[Math.floor(Math.random() * sizes.length)];
-  }
-
   isQuoteCategory(itemInfo) {
     if(itemInfo.category == 'quote') {
       return true;
