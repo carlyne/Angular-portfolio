@@ -11,7 +11,7 @@ export class GalleryComponent implements OnInit {
 
   galleryItemsThumbnails = [];
   
-  constructor(private galleryItemsData: GalleryItemsData) { }
+  constructor(private galleryItemsData: GalleryItemsData) {}
 
   ngOnInit(): void {
     this.galleryItemsThumbnails = this.galleryItemsData.itemsThumbnails;
@@ -43,9 +43,7 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  // getMore(itemInfo) {
-  //   if (itemInfo.category == 'project') {
-  //     return "/project";
-  //   }
-  // }
+  getLink(itemInfo) {
+    console.log(itemInfo.id);
+  }
 }
