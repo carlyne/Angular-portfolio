@@ -57,14 +57,12 @@ export class GalleryItemsData {
     }
   ]
 
-
-
-  // getItemThumbnailById(id: number) {
-  //   const itemsThumbnails = this.itemsThumbnails.find(
-  //     (item) => {
-  //       return item.id === id;
-  //     }
-  //   );
-  //   return itemsThumbnails;
-  // }
+  getItemThumbnailById(id: string) {
+    const itemsThumbnails = this.itemsThumbnails.find(
+      (item) => {
+        return item.id === parseInt(id);
+      }
+    );
+    return itemsThumbnails;
+  }
 }

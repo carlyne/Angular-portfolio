@@ -6,11 +6,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { SortNavComponent } from './sort-nav/sort-nav.component';
 import { GalleryItemsData } from './services/galleryItemsData.service';
 import { Routes, RouterModule } from '@angular/router';
-// import { ProjectComponent } from './project/project.component';
+import { ProjectComponent } from './project/project.component';
 
 const appRoutes: Routes = [
   { path: 'gallery', component: GalleryComponent },
-  // { path: 'gallery/:id', component: ProjectComponent },
+  { path: 'gallery/:id', component: ProjectComponent },
   { path: '', component: GalleryComponent }
 ]
 
@@ -18,8 +18,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     GalleryComponent,
-    SortNavComponent
-    // ProjectComponent
+    SortNavComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

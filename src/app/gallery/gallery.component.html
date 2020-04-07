@@ -6,7 +6,8 @@
             [ngClass]="[getCategoryStyle(galleryItem), galleryItem.size]" 
             [src]="galleryItem.srcImg" 
             [alt]="galleryItem.name"
-            (click)="getLink(galleryItem)" />
+            (click)="getLink(galleryItem)"
+            [routerLink]="['/gallery', galleryItem.id]" />
         
         <div class="item"
             *ngIf="isQuoteCategory(galleryItem) == true"
@@ -14,5 +15,7 @@
             <h2>{{galleryItem.content}}</h2>
         </div>
     </ng-container>
+
+ <!-- mettre la route dans le ngFor-->
 
 </figure>
