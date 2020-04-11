@@ -41,6 +41,16 @@ h2 {
     }  
 }
 
+h3 {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @media (min-width: $media-md) {
+        font-size: 2rem;
+    }  
+}
+
 .btn--filter {
     border: none;
     background-color: $btn-color;
@@ -125,13 +135,19 @@ hr {
 
 .item {
     margin: 10px;
+    cursor: pointer;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
+    transition: object-position 200ms ease-in;
+   
+
     &--project {
         background-color: $warm-color;
     }
     &--illus {
         background-color: $main-color;
+        background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100%' width='100%'><text x='0' y='50%' fill='white' font-size='20'>I love SVG!</text></svg>");
+        background-repeat: no-repeat;
     }
     &--quote{
         text-align: left;
@@ -141,6 +157,10 @@ hr {
         justify-content: center;
         word-break: break-all;
         padding: $space-p;
+    }
+
+    &:hover {
+        object-position: 250px;
     }
 }
 
