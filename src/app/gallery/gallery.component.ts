@@ -10,7 +10,7 @@ import { GalleryItemsData } from '../services/galleryItemsData.service';
 export class GalleryComponent implements OnInit {
 
   galleryItemsThumbnails = [];
-  
+
   constructor(private galleryItemsData: GalleryItemsData) {}
 
   ngOnInit(): void {
@@ -25,9 +25,17 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  getTexBg() {
+    const image = document.querySelector('figure img:last-child');
+    console.log(image);
+  }
+
   getCategoryStyle(itemInfo) {
+
+
     switch(itemInfo.category){
       case 'illustration' :
+        this.getTexBg();
         return 'item--illus';
         break;
       case 'project':
@@ -39,6 +47,6 @@ export class GalleryComponent implements OnInit {
   }
 
   getLink(itemInfo) {
-    console.log(itemInfo.id);
+    console.log(itemInfo);
   }
 }

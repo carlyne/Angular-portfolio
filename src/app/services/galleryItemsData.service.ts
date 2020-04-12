@@ -9,7 +9,6 @@ export class GalleryItemsData {
     } else {
       return sizes[Math.floor(Math.random() * sizes.length)];
     }
-    
   }
   
   itemsThumbnails = [
@@ -36,14 +35,14 @@ export class GalleryItemsData {
     },
     {
       id: 4,
-      name: 'Illustration1',
+      name: 'Illustration2',
       srcImg: '../assets/img/01.jpg',
       category: 'illustration',
       size: this.getRandomStyleSizing('illustration')
     },
     {
       id: 5,
-      name: 'Illustration1',
+      name: 'Illustration3',
       srcImg: '../assets/img/02.jpg',
       category: 'illustration',
       size: this.getRandomStyleSizing('illustration')

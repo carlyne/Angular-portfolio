@@ -14,12 +14,8 @@ export class ProjectComponent implements OnInit {
   constructor(private galleryItemsData: GalleryItemsData, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.route);
     const id = this.route.params.subscribe(params => {
-        console.log(params.id);
         this.project = this.galleryItemsData.getItemThumbnailById(params.id);
-        console.log(this.galleryItemsData.getItemThumbnailById(params.id));
-        console.log(this.project);
     });
   }
 
