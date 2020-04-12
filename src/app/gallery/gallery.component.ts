@@ -25,17 +25,15 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  getTexBg() {
-    const image = document.querySelector('figure img:last-child');
-    console.log(image);
+  getTexBg(itemInfo) {
+    let img = document.querySelector('figure img:last-child'); 
+    img.style.backgroundImage = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='100%' width='100%'><text x='20px' y='50%' fill='white' font-size='30' font-family='inherit'>${itemInfo}</text></svg>")`
   }
 
   getCategoryStyle(itemInfo) {
-
-
     switch(itemInfo.category){
       case 'illustration' :
-        this.getTexBg();
+        this.getTexBg(itemInfo.name);
         return 'item--illus';
         break;
       case 'project':
