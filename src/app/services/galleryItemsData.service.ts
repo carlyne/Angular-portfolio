@@ -28,7 +28,6 @@ export class GalleryItemsData {
     },
     {
       id: 3,
-      name: 'my quote',
       category: 'quote',
       content: 'Il faut toute la vie pour apprendre à vivre',
       size: this.getRandomStyleSizing('quote')
@@ -56,7 +55,6 @@ export class GalleryItemsData {
     },
     {
       id: 7,
-      name: 'my quote',
       category: 'quote',
       content: 'lorem ipsum dolore situa mentoris',
       size: this.getRandomStyleSizing('quote')

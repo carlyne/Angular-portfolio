@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 import { GalleryItemsData } from '../services/galleryItemsData.service';
 
 
@@ -25,15 +26,20 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  getTexBg(itemInfo) {
-    let img = document.querySelector('figure img:last-child'); 
-    img.style.backgroundImage = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='100%' width='100%'><text x='20px' y='50%' fill='white' font-size='30' font-family='inherit'>${itemInfo}</text></svg>")`
+  getTexBg(itemIndex, itemInfo) {
+    $(document).ready(function(){
+      let $item = $('figure img, figure div');
+      if( itemInfo != null ) {
+        $item.eq((itemIndex) - 1).css('backgroundImage', `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='100%' width='100%'><text x='20px' y='50%' fill='white' font-size='30' font-family='inherit'>`+itemInfo+`</text></svg>")`);
+      }
+     });
   }
 
   getCategoryStyle(itemInfo) {
+    this.getTexBg(itemInfo.id, itemInfo.name);
+
     switch(itemInfo.category){
       case 'illustration' :
-        this.getTexBg(itemInfo.name);
         return 'item--illus';
         break;
       case 'project':
